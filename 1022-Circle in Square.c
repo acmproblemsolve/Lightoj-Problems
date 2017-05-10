@@ -1,6 +1,6 @@
 /************************************************************************
-***   Problem No    : 1020                                            ***
-***   Problem Name  : A Childhood Game                                ***
+***   Problem No    : 1022                                           ***
+***   Problem Name  : Circle in Square                                ***
 ***   Type          : Ad-hoc                                          ***
 ***   Author        : Al-Amin                                         ***
 ***   E-mail        : ialamin.pro@gmail.com/alamin.iyakub@diu.edu.bd  ***
