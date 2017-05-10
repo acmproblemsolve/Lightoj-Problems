@@ -1,0 +1,24 @@
+    #include<stdio.h>
+    #include<math.h>
+
+    int main()
+    {
+        long long int trial,input,i,j,k,a;
+        scanf("%lld",&trial);
+
+        for(a=1;a<=trial;a++)
+        {
+            scanf("%lld",&input);
+            i=sqrt(input);
+            if(i<sqrt(input)) i++;
+            j=i*i;
+            k=j-i+1;
+            if (k==input) printf("Case %lld: %lld %lld\n",a,i,i);
+            else if(input<k && !(i%2)) printf("Case %lld: %lld %lld\n",a,i-k+input,i);
+            else if(input<k && (i%2)) printf("Case %lld: %lld %lld\n",a,i,i-k+input);
+            else if(input>k && !(i%2)) printf("Case %lld: %lld %lld\n",a,i,i-input+k);
+            else if(input>k && (i%2)) printf("Case %lld: %lld %lld\n",a,i-input+k,i);
+        }
+
+        return 0;
+    }
