@@ -1,0 +1,63 @@
+    #include<stdio.h>
+    #include<math.h>
+
+
+    int main(){
+
+        long long t,s,i,j,x,b,c,y;
+
+        scanf("%lld",&t);
+
+        for(i=0;i<t;i++){
+
+            scanf("%lld",&s);
+
+            for(j=sqrt(s)-0.5;;j++){
+
+                x=j*j;
+
+                if(x>=s)
+
+                    break;
+
+            }
+
+            b=(j*j)-(j*2-1)+1;
+
+            c=j%2;
+
+            if(c==0){
+
+                y=s-b;
+
+                if(y<j)
+
+                    printf("Case %lld: %lld %lld\n",i+1,y+1,j);
+
+                else
+
+                    printf("Case %lld: %lld %lld\n",i+1,j,(j*j-s+1));
+
+            }
+
+            else {
+
+                y=(j*j)-s;
+
+                if(y>=j)
+
+                    printf("Case %lld: %lld %lld\n",i+1,j,((s-b)+1));
+
+                else
+
+                    printf("Case %lld: %lld %lld\n",i+1,(j*j-s+1),j);
+
+            }
+
+
+        }
+
+        return 0;
+
+    }
+
