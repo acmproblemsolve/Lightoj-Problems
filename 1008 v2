@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <math.h>
+
+
+int main ()
+{
+    __int64 x,y;
+    double t,s,num,i,j,flag=0,c=0,dif;
+    double root;
+    scanf ("%lf",&t);
+    while(t--)
+    {
+        scanf("%lf",&s);
+        root=sqrt(s);
+        root=ceil(root);
+        if (fmod(root,2)==0)
+        {
+            y=1;
+            x=root;
+            num=x*x;
+            dif=num-s;
+            if(dif>=root)
+            {
+                y=root;
+                dif=dif-root;
+                x=x-dif-1;
+            }
+            else
+            {
+                y=y+dif;
+            }
+        }
+        else
+        {
+            x=1;
+            y=root;
+            num=y*y;
+            dif=num-s;
+            if(dif>=root)
+            {
+                x=root;
+                dif=dif-root;
+                y=y-dif-1;
+            }
+            else
+            {
+                x=x+dif;
+            }
+        }
+        printf("Case %.0lf: %d %d\n",++c+1e-11,x,y);
+    }
+    return 0;
+}
