@@ -1,0 +1,40 @@
+    #include <stdio.h>
+    #include <math.h>
+
+    int main()
+    {
+        long long  a, i, b, m;
+        int t, case1 = 0;
+        scanf("%d", &t);
+        while (t--)
+        {
+            scanf("%lld", &a);
+            m = sqrt(a);
+            for (i = m-1; (i-1)*(i-1)>=a || a>i*i;i++);
+            b = (i-1)*(i-1) + i;
+            if (i % 2 == 0)
+            {
+                if (a < b)
+                {
+                    printf("Case %d: %lld %lld\n", ++case1, i-(b-a), i);
+                }
+                else
+                {
+                    printf("Case %d: %lld %lld\n", ++case1, i, i-(a-b));
+                }
+            }
+            else
+            {
+                if (a < b)
+                {
+                    printf("Case %d: %lld %lld\n", ++case1, i, i-(b-a));
+                }
+                else
+                {
+                    printf("Case %d: %lld %lld\n", ++case1, i-(a-b), i);
+                }
+            }
+        }
+
+        return 0;
+    }
